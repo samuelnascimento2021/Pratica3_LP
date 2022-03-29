@@ -9,10 +9,10 @@ public class Exercicio1 {
 		String CPF = JOptionPane.showInputDialog("CPF: ");
         
 		
-        if (ValidaCPF.isCPF(CPF) == true)
-           
-        	JOptionPane.showMessageDialog(null, "Sucesso!");
-        	//System.out.printf("%s\n", ValidaCPF.imprimeCPF(CPF));
+        if (ValidaCPF.isCPF(CPF) == true)           
+        	
+		JOptionPane.showMessageDialog(null, "Sucesso!");
+        	
         else JOptionPane.showMessageDialog(null, "Falha!");
         }
 
