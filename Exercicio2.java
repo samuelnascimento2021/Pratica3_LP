@@ -7,7 +7,7 @@ public class Exercicio2 {
 		// TODO Auto-generated method stub
 		
 		int voto;
-		int soma20=0, soma30=0, soma1=0, soma2=0, Total;
+		double soma20=0, soma30=0, soma1=0, soma2=0, Total;
 		String vencedor="";
 		
 		do 
@@ -19,15 +19,12 @@ public class Exercicio2 {
 				case 30: soma30++; break;
 				case 1: soma1++; break;
 				case 2: soma2++; break;
+				case -1: break;
 				
-				default: JOptionPane.showMessageDialog(null,"Inv�lido",null, JOptionPane.WARNING_MESSAGE); break;
-				
-				
+				default: JOptionPane.showMessageDialog(null,"Inválido",null, JOptionPane.WARNING_MESSAGE); break;
+			
 			}
-			
-						
-			
-			
+		
 		}
 		while(voto!= -1);
 		
@@ -36,11 +33,20 @@ public class Exercicio2 {
 		if(soma20>soma30) vencedor = "MARIA";
 		if(soma30>20) vencedor = "PEDRO";
 		
-		JOptionPane.showMessageDialog(null, "Vencedor: " + vencedor,"Resultado",JOptionPane.WARNING_MESSAGE);
-		
-		
-		
-		
+		if(soma20>soma30) {
+			JOptionPane.showMessageDialog(null, "Vencedor(a): " + vencedor + 
+			"\n% de votos do vencedor: " + (soma20/Total)*100 + 
+			"\n% de votos brancos: " + (soma2/Total)*100 +
+			"\n% de votos nulos: " + (soma1/Total)*100 +
+			"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Vencedor(a): " + vencedor + 
+			"\n% de votos do vencedor: " + (soma30/Total)*100 + 
+			"\n% de votos brancos: " + (soma2/Total)*100 +
+			"\n% de votos nulos: " + (soma1/Total)*100 +
+			"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
+		}
 		
 	}
 
