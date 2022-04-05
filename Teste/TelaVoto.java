@@ -98,7 +98,7 @@ public class TelaVoto extends JFrame {
 						case 2: soma2++; break;
 						case -1: break;
 						
-						default: JOptionPane.showMessageDialog(null,"Inválido",null, JOptionPane.WARNING_MESSAGE); break;
+						default: JOptionPane.showMessageDialog(null,"InvÃ¡lido",null, JOptionPane.WARNING_MESSAGE); break;
 					
 					}
 				
@@ -115,14 +115,14 @@ public class TelaVoto extends JFrame {
 					String.format("\n%% de votos do vencedor: %.2f" , (soma20/Total)*100) + 
 					String.format("\n%% de votos brancos: %.2f" , (soma2/Total)*100) +
 					String.format("\n%% de votos nulos: %.2f" , (soma1/Total)*100) +
-					"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
+					"\nNÃºmero Total de usuÃ¡rios que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
 				}
 				else if(soma30>soma20){
 					JOptionPane.showMessageDialog(null, "Vencedor(a): " + vencedor + 
 					String.format("\n%% de votos do vencedor: %.2f" , (soma30/Total)*100) + 
 					String.format("\n%% de votos brancos: %.2f" , (soma2/Total)*100) +
 					String.format("\n%% de votos nulos: %.2f" , (soma1/Total)*100) +
-					"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
+					"\nNÃºmero Total de usuÃ¡rios que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "EMPATE! " + 
@@ -130,7 +130,7 @@ public class TelaVoto extends JFrame {
 					String.format("\n%% de votos do candidato(a) Pedro: %.2f" , (soma30/Total)*100) +
 					String.format("\n%% de votos brancos: %.2f" , (soma2/Total)*100) +
 					String.format("\n%% de votos nulos: %.2f" , (soma1/Total)*100) +
-					"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
+					"\nNÃºmero Total de usuÃ¡rios que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
 				}
 			}
 		});
