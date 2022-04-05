@@ -7,7 +7,7 @@ public class Exercicio2 {
 		// TODO Auto-generated method stub
 		
 		int voto;
-		double soma20=0, soma30=0, soma1=0, soma2=0, Total;
+		double soma20=0, soma30=0, soma1=0, soma2=0, Total=0;
 		String vencedor="";
 		
 		do 
@@ -31,20 +31,28 @@ public class Exercicio2 {
 		Total = soma20+soma30+soma1+soma2;
 		
 		if(soma20>soma30) vencedor = "MARIA";
-		if(soma30>20) vencedor = "PEDRO";
-		
+		if(soma30>soma20) vencedor = "PEDRO";
+				
 		if(soma20>soma30) {
 			JOptionPane.showMessageDialog(null, "Vencedor(a): " + vencedor + 
-			"\n% de votos do vencedor: " + (soma20/Total)*100 + 
-			"\n% de votos brancos: " + (soma2/Total)*100 +
-			"\n% de votos nulos: " + (soma1/Total)*100 +
+			String.format("\n%% de votos do vencedor: %.2f" , (soma20/Total)*100) + 
+			String.format("\n%% de votos brancos: %.2f" , (soma2/Total)*100) +
+			String.format("\n%% de votos nulos: %.2f" , (soma1/Total)*100) +
+			"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
+		}
+		else if(soma30>soma20){
+			JOptionPane.showMessageDialog(null, "Vencedor(a): " + vencedor + 
+			String.format("\n%% de votos do vencedor: %.2f" , (soma30/Total)*100) + 
+			String.format("\n%% de votos brancos: %.2f" , (soma2/Total)*100) +
+			String.format("\n%% de votos nulos: %.2f" , (soma1/Total)*100) +
 			"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Vencedor(a): " + vencedor + 
-			"\n% de votos do vencedor: " + (soma30/Total)*100 + 
-			"\n% de votos brancos: " + (soma2/Total)*100 +
-			"\n% de votos nulos: " + (soma1/Total)*100 +
+			JOptionPane.showMessageDialog(null, "EMPATE! " + 
+			String.format("\n%% de votos do candidato(a) Maria: %.2f" , (soma20/Total)*100) +
+			String.format("\n%% de votos do candidato(a) Pedro: %.2f" , (soma30/Total)*100) +
+			String.format("\n%% de votos brancos: %.2f" , (soma2/Total)*100) +
+			String.format("\n%% de votos nulos: %.2f" , (soma1/Total)*100) +
 			"\nNúmero Total de usuários que votaram: " + Total ,"Resultado",JOptionPane.WARNING_MESSAGE);
 		}
 		
